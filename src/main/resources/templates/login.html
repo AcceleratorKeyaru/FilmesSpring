@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../css/login-style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+      <sith-toolbar></sith-toolbar>
+    <main>
+        <form method="POST">
+            <div id="background">
+                <div id="login-box">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <label id="label-login">Login</label>
+                        <i style="text-shadow: 0.1em 0.1em #000; font-size: 40px; color: white;" class="material-icons">login</i>
+                    </div>
+                    <input name="usuario" id="input-login"placeholder="Seu nome de usuário"/>
+                    <div id="div-password">
+                        <input name="senha" id="input-password" type="password" placeholder="Sua senha"/>
+                        <button type="button" style="background-color: white; margin-right: 10px; border-radius: 30px;">
+                            <i id="eye" style="color: grey;" class="material-icons">visibility_off</i>
+                        </button>
+                    </div>
+                    <div>
+                        <button type="submit" id="button-login"class="geral-button">Login</button>
+                        <a href="/cadastro"><button type="button" id="button-cadastro" class="geral-button">Cadastre-se</button></a>
+                    </div>
+
+                </div>
+
+            </div>
+        </form>
+        
+        
+    </main>
+    <footer>
+        Feito por Grupo 3
+    <script src="../js/login.js"></script>
+    <script src="../js/toolbar.js"></script>
+</body>
+</html>
