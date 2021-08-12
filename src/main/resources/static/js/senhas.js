@@ -6,7 +6,7 @@ let form = document.getElementById("form");
 
 function verifica_nome(){
     if(document.getElementById("input-nome").value == null || document.getElementById("input-nome").value == " " || document.getElementById("input-nome").value==""){
-        alert("digite seu nome infeliz!!");
+        alert("digite seu nome!!");
         return false;
     }
     else{
@@ -15,7 +15,7 @@ function verifica_nome(){
 }
 function verifica_usuario(){
     if(document.getElementById("input-usuario").value == null || document.getElementById("input-usuario").value == " " || document.getElementById("input-usuario").value==""){
-        alert("digite seu usuario infeliz!!");
+        alert("digite seu usuario!!");
         return false;
     }
     else{
@@ -24,7 +24,7 @@ function verifica_usuario(){
 }
 function verifica_senha(){
     if(document.getElementById("input-senha").value !=  document.getElementById("input-senha2").value || document.getElementById("input-senha").value == ""){
-        alert("senhas invalidas");
+        alert("senhas invalidas!!");
         return false;
     }
     else{
@@ -42,6 +42,6 @@ function enviar_formulario(){
     form.submit();
     }
     else{
-    alert("Não foi possivel enviar o formulario");
+    alert("Não foi possivel enviar o formulario!!");
     }
 }

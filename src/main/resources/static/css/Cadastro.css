@@ -65,6 +65,33 @@ main{
     
 }
 
+#input-nota{
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+
+}
+
+#input-nota:focus{
+     margin: 10px;
+     padding: 10px;
+     font-size: 20px;
+     border-radius: 10px;
+     outline: none;
+     box-shadow: 0px 0px 10px 10px black;
+
+ }
+#input-sinopse{
+    margin: 10px;
+    font-size: 20px;
+    width: 56vw;
+    /* border-radius: 8px; */
+    background-color: white;
+    outline: none;
+}
+
+
 #div-password{  
     display: flex;
     
