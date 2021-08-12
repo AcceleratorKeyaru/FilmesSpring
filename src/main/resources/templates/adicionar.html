@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../css/Cadastro.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+<sith-toolbar></sith-toolbar>
+<main>
+    <div id="background">
+        <div id="login-box">
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <label id="label-login">Adicionar Filme</label>
+                <i style="text-shadow: 0.1em 0.1em #000; font-size: 40px; color: white;" class="material-icons">login</i>
+            </div>
+            <form id="form" method="POST">
+                <input type="text" name="nome" id="input-nome" placeholder="Inserir Filme">
+                <input name="nota" id="input-nota"placeholder="Insira uma Nota"/>
+
+                <div id="div-password">
+
+                    <input name="sinopse" id="input-sinopse" type="text" placeholder="Insira uma Sinopse"/>
+                    <button style="background-color: white; margin-right: 10px; border-radius: 30px;">
+
+                    </button>
+                </div>
+                <div>
+                </div>
+                <button type="button" id="button-cadastro" class="geral-button" onclick="enviar_formulario();">Cadastrar Filmes</button>
+            </form>
+        </div>
+
+    </div>
+
+
+</main>
+<footer>
+    Feito por Grupo 3
+    <script src="../js/login.js"></script>
+    <script src="../js/toolbar.js"></script>
+    <script src="../js/filmes.js"></script>
+</body>
+</html>
