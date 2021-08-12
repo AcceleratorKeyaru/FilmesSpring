@@ -2,6 +2,7 @@ package com.sith.filmesOnlineSith.controller;
 
 
 import com.sith.filmesOnlineSith.model.*;
+import static javax.swing.JOptionPane.showMessageDialog;
 import com.sith.filmesOnlineSith.repository.UserRepository;
 import com.sith.filmesOnlineSith.repository.FilmeRepository;
 import com.sith.filmesOnlineSith.service.FilmeService;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.management.ValueExp;
+import javax.swing.*;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
@@ -108,7 +110,6 @@ public class SithController {
     @RequestMapping(value = "/busca", method = RequestMethod.POST)
     public String busca(FilmeCadastro filme){
         List<Filme> filmeList = filmeService.findAll();
-        System.out.println(""+filme.getNome());
         try{
             for(Filme a: filmeList){
                 if(a.getNome().equals(filme.getNome())){
@@ -118,7 +119,6 @@ public class SithController {
             }
 
         }catch (Exception e) {
-            System.out.println(e);
             return "redirect:/busca";
         }
 
