@@ -17,18 +17,19 @@
                     <label id="label-login">Editar Filmes</label>
                     <i style="text-shadow: 0.1em 0.1em #000; font-size: 40px; color: white;" class="material-icons">login</i>
                 </div>
-                <input type="text" name="" id="input-nome" placeholder="Insira o nome do filme">
-                <input id="input-usuario"placeholder="Insira a nota do filme">
-                <div id="div-password">
-                    
-                    <input id="input-senha" type="password" placeholder="Insira a Sinopse do filme">
+                <form id="form" method="POST">
+                <input type="text" name="Nome" id="input-nome-Atual" placeholder="Insira o nome atual do filme">
+                <input type="text" name="novonome" id="input-nome" placeholder="Insira o nome do filme">
+                <input name="nota" id="input-nota"placeholder="Insira a nota do filme">
+                <input  name="sinopse" id="input-sinopse" type="text" placeholder="Insira a Sinopse do filme">
+                    <div id="div-password">
+
                     <button style="background-color: white; margin-right: 10px; border-radius: 30px;">
                         
                     </button>
                 </div>
-                <div>
-                </div>
-                <button id="button-cadastro" class="geral-button">Editar</button>
+                </form>
+                <button id="button-cadastro" class="geral-button" onclick="enviar_formulario();">Salvar</button>
             </div>
             
         </div>
@@ -37,8 +38,9 @@
     </main>
     <footer>
         Feito por Grupo 3
-    <script src="../js/login.js"></script>
     <script src="../js/toolbar.js"></script>
-    <script src="../js/senhas.js"></script>
+    <script src="../js/editar.js"></script>
+
+
 </body>
 </html>

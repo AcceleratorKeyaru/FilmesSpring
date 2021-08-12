@@ -79,7 +79,6 @@ public class SithController {
     @RequestMapping(value = "/cadastro",method = RequestMethod.POST)
     public String cadastrar(UserCadastro userCadastro){
         userService.save(new User(userCadastro.Nome,userCadastro.usuario, userCadastro.senha));
-        System.out.println("Nome:"+userCadastro.getNome());
         return "redirect:/login";
     }
 
@@ -124,5 +123,27 @@ public class SithController {
 
         return "redirect:/busca";
     }
+
+    @RequestMapping(value = "/edicao", method = RequestMethod.POST)
+    public String editar(FilmeCadastro filme){
+        List<Filme> filmeList = filmeService.findAll();
+        try{
+            for(Filme a: filmeList){
+                if(a.getNome().equals(filme.getNome())){
+                    a.setNome(filme.getNovonome());
+                    a.setNome(filme.getSinopse());
+                    a.setNome(filme.getNota());
+                    filmeService.save(new Filme(filme.getNovonome(),filme.getNota(), filme.getSinopse()));
+                    return "redirect:/gerenciado";
+                }
+            }
+
+        }catch (Exception e) {
+            return "redirect:/edicao";
+        }
+
+        return "redirect:/edicao";
+    }
+
 
 }

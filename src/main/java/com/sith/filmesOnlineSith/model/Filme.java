@@ -25,6 +25,7 @@ public class Filme {
         this.sinopse = sinopse;
     }
 
+
     public Filme(Long id, String nome, String nota, String sinopse) {
         this.id = id;
         this.nome = nome;
