@@ -6,6 +6,7 @@ public class FilmeCadastro {
         public String nota;
         public String sinopse;
         public String novonome;
+        public String deletar;
 
 
         public FilmeCadastro(String nome, String nota, String sinopse) {
@@ -44,5 +45,13 @@ public class FilmeCadastro {
 
         public void setNovonome(String novonome) {
             this.novonome = novonome;
+        }
+
+        public String getDeletar() {
+            return deletar;
+        }
+
+        public void setDeletar(String deletar) {
+            this.deletar = deletar;
         }
 }

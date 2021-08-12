@@ -32,5 +32,9 @@ public class FilmeServiceImpl implements FilmeService{
 
     }
 
+    @Override
+    public void delete(){
+        filmeRepository.deleteAll();
+    }
 
 }

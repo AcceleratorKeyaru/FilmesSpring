@@ -75,6 +75,11 @@ public class SithController {
         return "adicionar";
     }
 
+    @RequestMapping(value = "/deletar",method = RequestMethod.GET)
+    public String getApagarPage(){
+        return "deletar";
+    }
+
     //metodos post
     @RequestMapping(value = "/cadastro",method = RequestMethod.POST)
     public String cadastrar(UserCadastro userCadastro){
@@ -133,6 +138,7 @@ public class SithController {
                     a.setNome(filme.getNovonome());
                     a.setNome(filme.getSinopse());
                     a.setNome(filme.getNota());
+                    filmeService.delete();
                     filmeService.save(new Filme(filme.getNovonome(),filme.getNota(), filme.getSinopse()));
                     return "redirect:/gerenciado";
                 }
@@ -144,6 +150,21 @@ public class SithController {
 
         return "redirect:/edicao";
     }
+    @RequestMapping(value = "/deletar", method = RequestMethod.POST)
+    public String apagar(FilmeCadastro filme){
+        List<Filme> filmeList = filmeService.findAll();
 
+        try {
+            for(Filme a: filmeList){
+                if (a.getNome().equals(filme.getNome())) {
+                    filmeService.delete();
+                    return "redirect:/gerenciado";
+                }
+            }
+        }catch (Exception e) {
+            return "redirect:/deletar";
+        }
+        return "redirect:/deletar";
+    }
 
 }
