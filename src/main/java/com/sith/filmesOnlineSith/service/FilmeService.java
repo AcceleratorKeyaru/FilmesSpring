@@ -13,6 +13,8 @@ public interface FilmeService {
         public Filme save(Filme filme);
 
         public void delete();
+
+        public void deleteById(Long id);
     }
 
 

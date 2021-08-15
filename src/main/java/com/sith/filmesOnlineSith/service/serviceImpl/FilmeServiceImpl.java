@@ -37,4 +37,10 @@ public class FilmeServiceImpl implements FilmeService{
         filmeRepository.deleteAll();
     }
 
+    @Override
+    public void deleteById(Long id){
+
+        filmeRepository.deleteById(id);
+    }
+
 }

@@ -138,7 +138,7 @@ public class SithController {
                     a.setNome(filme.getNovonome());
                     a.setNome(filme.getSinopse());
                     a.setNome(filme.getNota());
-                    filmeService.delete();
+                    filmeService.deleteById(a.getId());
                     filmeService.save(new Filme(filme.getNovonome(),filme.getNota(), filme.getSinopse()));
                     return "redirect:/gerenciado";
                 }
@@ -157,7 +157,7 @@ public class SithController {
         try {
             for(Filme a: filmeList){
                 if (a.getNome().equals(filme.getNome())) {
-                    filmeService.delete();
+                    filmeService.deleteById(a.getId());
                     return "redirect:/gerenciado";
                 }
             }
